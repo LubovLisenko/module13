@@ -170,7 +170,7 @@ import java.util.stream.Collectors;
         }
 
         private static void commentsToJsonFile(int userId, int postId, List<Comment> commentList) {
-            String jsonFile = MessageFormat.format("src/main/java/user-" + userId + "-post-" + postId + "-comments.json",
+            String jsonFile = MessageFormat.format("src/main/java/user-{0}-post-{1}-comments.json",
                     userId, postId);
             try (Writer fileWriter = new FileWriter(jsonFile)) {
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
